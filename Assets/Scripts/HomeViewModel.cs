@@ -2,12 +2,10 @@ using UniRx;
 
 public class HomeViewModel
 {
-    public readonly ReactiveCommand ScoreButonPressed;
-    public readonly ReactiveCommand SettingsButonPressed;
+    public readonly ReactiveProperty<bool> isVisible;
 
     public HomeViewModel()
     {
-        ScoreButonPressed = new ReactiveCommand();
-        SettingsButonPressed = new ReactiveCommand();
+        isVisible = new ReactiveProperty<bool>();
     }
 }

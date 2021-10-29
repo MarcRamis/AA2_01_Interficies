@@ -2,14 +2,21 @@ using UniRx;
 
 public class ButtonsController
 {
+    private readonly ButtonsViewModel _buttonsViewModel;
+    
     private readonly HomeViewModel _homeViewModel;
+    private readonly ScoreViewModel _scoreViewModel;
+    private readonly SettingsViewModel _settingsViewModel;
 
-    public ButtonsController(HomeViewModel viewModel)
+    public ButtonsController(ButtonsViewModel viewModel, HomeViewModel homeViewModel, ScoreViewModel scoreViewModel, SettingsViewModel settingsViewModel)
     {
-        _homeViewModel = viewModel;
+        _buttonsViewModel = viewModel;
+        _homeViewModel = homeViewModel;
+        _scoreViewModel = scoreViewModel;
+        _settingsViewModel = settingsViewModel;
 
-        _homeViewModel
-            .ScoreButonPressed
+        _buttonsViewModel
+            .ScoreButtonPressed
             .Subscribe((_) =>
             {
             });

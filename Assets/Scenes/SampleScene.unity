@@ -253,6 +253,7 @@ MonoBehaviour:
   _homeReviewPrefab: {fileID: 6561385786022596416, guid: dd2397caeb764644895c458bede0e1fe, type: 3}
   _scoreReviewPrefab: {fileID: -7298970278293268294, guid: 35599a449c6966247b5d3082ef6a5ca3, type: 3}
   _settingsReviewPrefab: {fileID: 1371562450887303294, guid: 034caf80dcbb8a7408943da7634fe437, type: 3}
+  _buttonsPrefab: {fileID: 3891752535671707181, guid: 0afa19610463c4b48a465c7b4f8ea873, type: 3}
 --- !u!1 &1547208591
 GameObject:
   m_ObjectHideFlags: 0

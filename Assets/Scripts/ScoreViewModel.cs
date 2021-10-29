@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UniRx;
 
-public class ScoreViewModel : MonoBehaviour
+public class ScoreViewModel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public readonly ReactiveProperty<bool> isVisible;
 
-    // Update is called once per frame
-    void Update()
+    public ScoreViewModel()
     {
-        
+        isVisible = new ReactiveProperty<bool>();
     }
 }
