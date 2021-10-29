@@ -215,6 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673123020}
+  - component: {fileID: 673123021}
   m_Layer: 0
   m_Name: MenuInstaller
   m_TagString: Untagged
@@ -236,6 +237,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673123021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673123019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f63542bddeec849b19236c7a91942b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasParent: {fileID: 1547208595}
+  _homeReviewPrefab: {fileID: 6561385786022596416, guid: dd2397caeb764644895c458bede0e1fe, type: 3}
+  _scoreReviewPrefab: {fileID: -7298970278293268294, guid: 35599a449c6966247b5d3082ef6a5ca3, type: 3}
+  _settingsReviewPrefab: {fileID: 1371562450887303294, guid: 034caf80dcbb8a7408943da7634fe437, type: 3}
 --- !u!1 &1547208591
 GameObject:
   m_ObjectHideFlags: 0
