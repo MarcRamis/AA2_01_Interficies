@@ -25,6 +25,7 @@ public class ButtonsController
                 _homeViewModel.isVisible.Value = true;
                 _scoreViewModel.isVisible.Value = false;
                 _settingsViewModel.isVisible.Value = false;
+                _buttonsViewModel.Color.Value = new UnityEngine.Color(0, 0, 255);
             });
         _buttonsViewModel
             .ScoreButtonPressed

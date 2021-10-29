@@ -22,7 +22,11 @@ public class ButtonsView : MonoBehaviour
         _homeButton.onClick.AddListener(() => 
         {
             _viewModel.HomeButtonPressed.Execute();
-            SetSelectedImageColorButton();
+            //SetSelectedImageColorButton();
+            _viewModel.Color.Subscribe((newColor) =>
+            {
+                _homeImage.DOColor(newColor, 1f);
+            });
         });
         _scoreButton.onClick.AddListener(() =>
         {
@@ -36,7 +40,7 @@ public class ButtonsView : MonoBehaviour
 
     public void SetInitialImageColorButton()
     {
-        _homeImage.DOColor(Color.white, 1f);
+        _homeImage.DOColor(/*Color.white*/new Color(98, 113, 255), 1f);
     }
 
     public void SetSelectedImageColorButton()
