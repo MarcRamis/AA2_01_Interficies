@@ -6,4 +6,17 @@ using UnityEngine.UI;
 
 public class HomeView : MonoBehaviour
 {
+    private HomeViewModel _homeViewModel;
+
+    public void SetViewModel(HomeViewModel homeViewModel)
+    {
+        _homeViewModel = homeViewModel;
+
+        _homeViewModel
+            .isVisible
+            .Subscribe((isVisible) =>
+            {
+                gameObject.SetActive(isVisible);
+            });
+    }
 }

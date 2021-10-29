@@ -228,6 +228,9 @@ MonoBehaviour:
   _homeButton: {fileID: 7184953645520146190}
   _scoreButton: {fileID: 7184953644642528066}
   _settingsButton: {fileID: 7184953645158336452}
+  _homeImage: {fileID: 7184953645520146189}
+  _scoreImage: {fileID: 7184953644642528065}
+  _settingsImage: {fileID: 7184953645158336443}
 --- !u!1 &7184953644525016604
 GameObject:
   m_ObjectHideFlags: 0

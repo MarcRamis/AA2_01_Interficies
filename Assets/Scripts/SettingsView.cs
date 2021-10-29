@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 public class SettingsView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private SettingsViewModel _settingsViewModel;
 
-    // Update is called once per frame
-    void Update()
+    public void SetViewModel(SettingsViewModel settingsViewModel)
     {
-        
+        _settingsViewModel = settingsViewModel;
+
+        _settingsViewModel
+            .isVisible
+            .Subscribe((isVisible)=>
+            {
+                gameObject.SetActive(isVisible);
+            });
     }
 }

@@ -21,6 +21,9 @@ public class MenuInstaller : MonoBehaviour
         var settingsViewModel = new SettingsViewModel();
         var buttonsViewModel = new ButtonsViewModel();
 
+        homeReviewView.SetViewModel(homeViewModel);
+        scoreReviewView.SetViewModel(scoreViewModel);
+        settingsReviewView.SetViewModel(settingsViewModel);
         buttonsView.SetViewModel(buttonsViewModel);
 
         new ButtonsController(buttonsViewModel, homeViewModel, scoreViewModel, settingsViewModel);
