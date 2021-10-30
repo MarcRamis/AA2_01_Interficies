@@ -7,7 +7,9 @@ public class ButtonsViewModel
     public readonly ReactiveCommand ScoreButtonPressed;
     public readonly ReactiveCommand SettingsButtonPressed;
 
-    public readonly ReactiveProperty<UnityEngine.Color> Color;
+    public readonly ReactiveProperty<UnityEngine.Color> HomeColor;
+    public readonly ReactiveProperty<UnityEngine.Color> ScoreColor;
+    public readonly ReactiveProperty<UnityEngine.Color> SettingsColor;
 
     public readonly Image HomeImage;
 
@@ -16,6 +18,8 @@ public class ButtonsViewModel
         HomeButtonPressed = new ReactiveCommand();
         ScoreButtonPressed = new ReactiveCommand();
         SettingsButtonPressed = new ReactiveCommand();
-        Color = new ReactiveProperty<UnityEngine.Color>();
+        HomeColor = new ReactiveProperty<UnityEngine.Color>();
+        ScoreColor = new ReactiveProperty<UnityEngine.Color>();
+        SettingsColor = new ReactiveProperty<UnityEngine.Color>();
     }
 }

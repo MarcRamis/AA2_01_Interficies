@@ -25,7 +25,9 @@ public class ButtonsController
                 _homeViewModel.isVisible.Value = true;
                 _scoreViewModel.isVisible.Value = false;
                 _settingsViewModel.isVisible.Value = false;
-                _buttonsViewModel.Color.Value = new UnityEngine.Color(0, 0, 255);
+                _buttonsViewModel.HomeColor.Value = new UnityEngine.Color(0, 0, 255);
+                _buttonsViewModel.ScoreColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
+                _buttonsViewModel.SettingsColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
             });
         _buttonsViewModel
             .ScoreButtonPressed
@@ -34,6 +36,9 @@ public class ButtonsController
                 _homeViewModel.isVisible.Value = false;
                 _scoreViewModel.isVisible.Value = true;
                 _settingsViewModel.isVisible.Value = false;
+                _buttonsViewModel.HomeColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
+                _buttonsViewModel.ScoreColor.Value = new UnityEngine.Color(0, 0, 255);
+                _buttonsViewModel.SettingsColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
             });
         _buttonsViewModel
             .SettingsButtonPressed
@@ -42,6 +47,9 @@ public class ButtonsController
                 _homeViewModel.isVisible.Value = false;
                 _scoreViewModel.isVisible.Value = false;
                 _settingsViewModel.isVisible.Value = true;
+                _buttonsViewModel.HomeColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
+                _buttonsViewModel.ScoreColor.Value = new UnityEngine.Color(0.38f, 0.44f, 1.0f);
+                _buttonsViewModel.SettingsColor.Value = new UnityEngine.Color(0, 0, 255);
             });
     }
 }

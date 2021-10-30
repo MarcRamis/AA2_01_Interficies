@@ -23,18 +23,63 @@ public class ButtonsView : MonoBehaviour
         {
             _viewModel.HomeButtonPressed.Execute();
             //SetSelectedImageColorButton();
-            _viewModel.Color.Subscribe((newColor) =>
+            _viewModel.HomeColor.Subscribe((newColor) =>
             {
                 _homeImage.DOColor(newColor, 1f);
             });
+
+            _viewModel.ScoreColor.Subscribe((newColor) =>
+            {
+                _scoreImage.DOColor(newColor, 1f);
+            });
+
+            _viewModel.SettingsColor.Subscribe((newColor) =>
+            {
+                _settingsImage.DOColor(newColor, 1f);
+
+            });
+
         });
         _scoreButton.onClick.AddListener(() =>
         {
             _viewModel.ScoreButtonPressed.Execute();
+
+            _viewModel.HomeColor.Subscribe((newColor) =>
+            {
+                _homeImage.DOColor(newColor, 1f);
+            });
+
+            _viewModel.ScoreColor.Subscribe((newColor) =>
+            {
+                _scoreImage.DOColor(newColor, 1f);
+            });
+
+            _viewModel.SettingsColor.Subscribe((newColor) =>
+            {
+                _settingsImage.DOColor(newColor, 1f);
+
+            });
+
         });
         _settingsButton.onClick.AddListener(() =>
         {
             _viewModel.SettingsButtonPressed.Execute();
+
+            _viewModel.HomeColor.Subscribe((newColor) =>
+            {
+                _homeImage.DOColor(newColor, 1f);
+            });
+
+            _viewModel.ScoreColor.Subscribe((newColor) =>
+            {
+                _scoreImage.DOColor(newColor, 1f);
+            });
+
+            _viewModel.SettingsColor.Subscribe((newColor) =>
+            {
+                _settingsImage.DOColor(newColor, 1f);
+
+            });
         });
     }
 
