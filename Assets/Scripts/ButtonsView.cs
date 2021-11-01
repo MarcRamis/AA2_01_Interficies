@@ -22,7 +22,7 @@ public class ButtonsView : MonoBehaviour
         _homeButton.onClick.AddListener(() => 
         {
             _viewModel.HomeButtonPressed.Execute();
-            //SetSelectedImageColorButton();
+            
             _viewModel.HomeColor.Subscribe((newColor) =>
             {
                 _homeImage.DOColor(newColor, 1f);
@@ -83,13 +83,4 @@ public class ButtonsView : MonoBehaviour
         });
     }
 
-    public void SetInitialImageColorButton()
-    {
-        _homeImage.DOColor(/*Color.white*/new Color(98, 113, 255), 1f);
-    }
-
-    public void SetSelectedImageColorButton()
-    {
-        _homeImage.DOColor(new Color(0,0,255), 1f);
-    }
 }
