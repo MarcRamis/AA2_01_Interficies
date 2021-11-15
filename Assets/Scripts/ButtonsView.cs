@@ -19,67 +19,36 @@ public class ButtonsView : MonoBehaviour
     {
         _viewModel = viewModel;
 
+        _viewModel.HomeColor.Subscribe((newColor) =>
+        {
+            _homeImage.DOColor(newColor, 1f);
+        });
+
         _homeButton.onClick.AddListener(() => 
         {
             _viewModel.HomeButtonPressed.Execute();
-            
-            _viewModel.HomeColor.Subscribe((newColor) =>
-            {
-                _homeImage.DOColor(newColor, 1f);
-            });
-
-            _viewModel.ScoreColor.Subscribe((newColor) =>
-            {
-                _scoreImage.DOColor(newColor, 1f);
-            });
-
-            _viewModel.SettingsColor.Subscribe((newColor) =>
-            {
-                _settingsImage.DOColor(newColor, 1f);
-
-            });
-
         });
         _scoreButton.onClick.AddListener(() =>
         {
             _viewModel.ScoreButtonPressed.Execute();
+        });
 
-            _viewModel.HomeColor.Subscribe((newColor) =>
-            {
-                _homeImage.DOColor(newColor, 1f);
-            });
+        _viewModel.ScoreColor.Subscribe((newColor) =>
+        {
+            _scoreImage.DOColor(newColor, 1f);
+        });
 
-            _viewModel.ScoreColor.Subscribe((newColor) =>
-            {
-                _scoreImage.DOColor(newColor, 1f);
-            });
-
-            _viewModel.SettingsColor.Subscribe((newColor) =>
-            {
-                _settingsImage.DOColor(newColor, 1f);
-
-            });
+        _viewModel.SettingsColor.Subscribe((newColor) =>
+        {
+            _settingsImage.DOColor(newColor, 1f);
 
         });
+
         _settingsButton.onClick.AddListener(() =>
         {
             _viewModel.SettingsButtonPressed.Execute();
 
-            _viewModel.HomeColor.Subscribe((newColor) =>
-            {
-                _homeImage.DOColor(newColor, 1f);
-            });
 
-            _viewModel.ScoreColor.Subscribe((newColor) =>
-            {
-                _scoreImage.DOColor(newColor, 1f);
-            });
-
-            _viewModel.SettingsColor.Subscribe((newColor) =>
-            {
-                _settingsImage.DOColor(newColor, 1f);
-
-            });
         });
     }
 
